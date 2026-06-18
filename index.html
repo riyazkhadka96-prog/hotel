@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurelian Grand — A five-star luxury hotel offering world-class rooms, fine dining, spa retreats, and unforgettable experiences.">
+  <title>Aurelian Grand | Luxury Hotel & Resort</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ════ NAVBAR ════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">AURELIAN <span>GRAND</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#booking" class="nav-cta">Book Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="star">★</span> Five-Star Luxury <span class="star">★</span>
+      </div>
+      <h1>Where Elegance Meets Serenity</h1>
+      <p>Discover an unrivalled retreat where every detail is crafted for perfection. Timeless luxury, modern indulgence.</p>
+      <div class="hero-buttons">
+        <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+        <a href="#experience" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ════ STATS BAR ════ -->
+  <section style="background:var(--dark-surface);border-bottom:1px solid var(--glass-border);padding:3rem 0;">
+    <div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+      <div class="reveal">
+        <div class="stat-number" data-count="150" data-suffix="+" style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);">0</div>
+        <p style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-top:0.5rem;">Luxury Rooms</p>
+      </div>
+      <div class="reveal">
+        <div class="stat-number" data-count="12" style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);">0</div>
+        <p style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-top:0.5rem;">Restaurants & Bars</p>
+      </div>
+      <div class="reveal">
+        <div class="stat-number" data-count="98" data-suffix="%" style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);">0</div>
+        <p style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-top:0.5rem;">Guest Satisfaction</p>
+      </div>
+      <div class="reveal">
+        <div class="stat-number" data-count="25" style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);">0</div>
+        <p style="color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-top:0.5rem;">Years of Excellence</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ AMENITIES ════ -->
+  <section class="section" id="amenities">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">World-Class Amenities</h2>
+        <p class="section-desc">Every amenity is thoughtfully designed to elevate your stay into an extraordinary experience.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <span class="feature-icon">🍽️</span>
+          <h3>Fine Dining</h3>
+          <p>Savour exquisite culinary creations from award-winning chefs across our twelve restaurants and lounges.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🧖</span>
+          <h3>Luxury Spa</h3>
+          <p>Rejuvenate your senses with bespoke treatments, hydrotherapy circuits, and holistic wellness programmes.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🏊</span>
+          <h3>Infinity Pool</h3>
+          <p>Swim among the clouds in our rooftop infinity pool overlooking breathtaking panoramic vistas.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🏋️</span>
+          <h3>Fitness Centre</h3>
+          <p>State-of-the-art equipment and personal trainers to keep you at your peak during your stay.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🛎️</span>
+          <h3>Concierge Service</h3>
+          <p>Our dedicated concierge team is available around the clock to curate your perfect experience.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon">🚗</span>
+          <h3>Valet & Transfers</h3>
+          <p>Complimentary luxury airport transfers and valet parking for a seamless arrival and departure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ ROOMS ════ -->
+  <section class="section" id="rooms" style="background:var(--dark-surface);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Accommodations</span>
+        <h2 class="section-title">Exquisite Rooms & Suites</h2>
+        <p class="section-desc">Each room is a sanctuary of comfort, blending contemporary elegance with timeless luxury.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="rooms-grid">
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="images/room-deluxe.png" alt="Deluxe King Room with ocean view">
+            <div class="room-price">
+              <span class="amount">$320</span>
+              <span class="period"> / night</span>
+            </div>
+          </div>
+          <div class="room-info">
+            <h3>Deluxe King Room</h3>
+            <p>Spacious 45m² retreat with ocean views, king-size bed, and premium amenities for an unforgettable stay.</p>
+            <div class="room-amenities">
+              <span>👤 2 Guests</span>
+              <span>📐 45 m²</span>
+              <span>🌊 Ocean View</span>
+              <span>📶 Free WiFi</span>
+            </div>
+            <a href="#booking" class="room-btn">Reserve Now →</a>
+          </div>
+        </div>
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="images/room-suite.png" alt="Grand Suite with city skyline view">
+            <div class="room-price">
+              <span class="amount">$580</span>
+              <span class="period"> / night</span>
+            </div>
+          </div>
+          <div class="room-info">
+            <h3>Grand Suite</h3>
+            <p>An 80m² masterpiece featuring a separate living area, panoramic skyline views, and butler service.</p>
+            <div class="room-amenities">
+              <span>👤 3 Guests</span>
+              <span>📐 80 m²</span>
+              <span>🏙️ Skyline View</span>
+              <span>🛁 Jacuzzi</span>
+            </div>
+            <a href="#booking" class="room-btn">Reserve Now →</a>
+          </div>
+        </div>
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="images/room-penthouse.png" alt="Royal Penthouse with private terrace">
+            <div class="room-price">
+              <span class="amount">$1,200</span>
+              <span class="period"> / night</span>
+            </div>
+          </div>
+          <div class="room-info">
+            <h3>Royal Penthouse</h3>
+            <p>The pinnacle of luxury — 160m² with private terrace, hot tub, and a personal chef on call.</p>
+            <div class="room-amenities">
+              <span>👤 4 Guests</span>
+              <span>📐 160 m²</span>
+              <span>🌅 Terrace</span>
+              <span>👨‍🍳 Private Chef</span>
+            </div>
+            <a href="#booking" class="room-btn">Reserve Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ EXPERIENCE ════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Discover</span>
+        <h2 class="section-title">Curated Experiences</h2>
+        <p class="section-desc">Immerse yourself in moments crafted to inspire, relax, and delight every sense.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card reveal">
+          <img src="images/restaurant.png" alt="Fine dining experience">
+          <div class="exp-overlay">
+            <h3>Gastronomic Journey</h3>
+            <p>Michelin-starred dining with seasonal tasting menus</p>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <img src="images/spa.png" alt="Spa and wellness retreat">
+          <div class="exp-overlay">
+            <h3>Wellness Retreat</h3>
+            <p>Holistic spa treatments and mindfulness sessions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIALS ════ -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Guest Stories</span>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-desc">Hear from those who have experienced the Aurelian difference.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"An absolutely magical experience. Every detail was impeccable — from the breathtaking room to the extraordinary service. This is what true luxury feels like."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EA</div>
+            <div>
+              <div class="testimonial-name">Eleanor Ashworth</div>
+              <div class="testimonial-role">London, United Kingdom</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"The Royal Penthouse exceeded every expectation. The private chef prepared the most extraordinary meal, and the spa was pure bliss. We'll be returning annually."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">James Moreau</div>
+              <div class="testimonial-role">Paris, France</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"From the moment we arrived, the staff treated us like royalty. The attention to detail is unmatched. A once-in-a-lifetime stay that we'll cherish forever."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div>
+              <div class="testimonial-name">Sofia Kimura</div>
+              <div class="testimonial-role">Tokyo, Japan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ BOOKING CTA ════ -->
+  <section class="booking-cta" id="booking">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="reveal">
+        <span class="section-tag">Reserve Your Stay</span>
+        <h2 class="section-title">Begin Your Luxury Journey</h2>
+        <p>Secure your exclusive retreat today and experience the art of refined hospitality.</p>
+        <a href="#contact" class="btn btn-primary">Book Your Stay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CONTACT ════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-desc">We'd love to hear from you. Reach out for reservations, enquiries, or special requests.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>1 Royal Marina Drive<br>Côte d'Azur, Monaco 98000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+377 97 77 0000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>reservations@aureliangrand.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Front Desk</h4>
+              <p>Available 24 hours, 7 days a week</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin">Check-In</label>
+              <input type="date" id="checkin">
+            </div>
+            <div class="form-group">
+              <label for="checkout">Check-Out</label>
+              <input type="date" id="checkout">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="roomType">Room Type</label>
+            <select id="roomType">
+              <option value="">Select a room</option>
+              <option value="deluxe">Deluxe King Room — $320/night</option>
+              <option value="suite">Grand Suite — $580/night</option>
+              <option value="penthouse">Royal Penthouse — $1,200/night</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Special requests or enquiries..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">AURELIAN <span>GRAND</span></a>
+          <p>A sanctuary of timeless luxury on the Mediterranean. Where every moment is crafted for perfection.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#rooms">Rooms & Suites</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#experience">Experiences</a>
+          <a href="#testimonials">Guest Reviews</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Dining</a>
+          <a href="#">Spa & Wellness</a>
+          <a href="#">Events</a>
+          <a href="#">Concierge</a>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aurelian Grand. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Pinterest">P</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
