@@ -363,6 +363,22 @@ ul { list-style: none; }
   margin: 0 auto 2.5rem; font-weight: 300;
 }
 
+/* ── VOICE ASSISTANT ── */
+.voice-assistant-section {
+  background: var(--dark-surface);
+}
+.voice-assistant-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-gold);
+}
+.voice-assistant-wrap iframe {
+  display: block;
+}
+
 /* ── CONTACT ── */
 .contact-grid {
   display: grid;
