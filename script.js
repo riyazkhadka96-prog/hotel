@@ -32,7 +32,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 // ── Smooth scroll for anchor links ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(.open-chat-inbox)').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
@@ -41,6 +41,70 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ── Chat inbox (StayNEP concierge) ──
+const STAYNEP_BASE = 'http://localhost:3000';
+const STAYNEP_HOTEL = 'willow-hotel';
+
+const chatInbox = document.getElementById('chatInbox');
+const chatToggle = document.getElementById('chatInboxToggle');
+const chatClose = document.getElementById('chatInboxClose');
+let conciergeLoaded = false;
+
+function loadConciergeEmbed() {
+  if (conciergeLoaded || document.getElementById('staynep-embed-script')) return;
+  conciergeLoaded = true;
+
+  const script = document.createElement('script');
+  script.id = 'staynep-embed-script';
+  script.src = `${STAYNEP_BASE}/embed.js`;
+  script.setAttribute('data-hotel', STAYNEP_HOTEL);
+  script.setAttribute('data-base', STAYNEP_BASE);
+  script.setAttribute('data-height', '100%');
+  script.async = true;
+  document.body.appendChild(script);
+}
+
+function openChatInbox() {
+  loadConciergeEmbed();
+  chatInbox.classList.add('open');
+  chatInbox.setAttribute('aria-hidden', 'false');
+  chatToggle.setAttribute('aria-expanded', 'true');
+  navLinks.classList.remove('active');
+  hamburger.classList.remove('active');
+}
+
+function closeChatInbox() {
+  chatInbox.classList.remove('open');
+  chatInbox.setAttribute('aria-hidden', 'true');
+  chatToggle.setAttribute('aria-expanded', 'false');
+}
+
+function toggleChatInbox() {
+  if (chatInbox.classList.contains('open')) {
+    closeChatInbox();
+  } else {
+    openChatInbox();
+  }
+}
+
+if (chatInbox && chatToggle) {
+  chatToggle.addEventListener('click', toggleChatInbox);
+  chatClose?.addEventListener('click', closeChatInbox);
+
+  document.querySelectorAll('.open-chat-inbox').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openChatInbox();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && chatInbox.classList.contains('open')) {
+      closeChatInbox();
+    }
+  });
+}
 
 // ── Counter animation for stats ──
 const counters = document.querySelectorAll('.stat-number');

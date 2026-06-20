@@ -18,7 +18,7 @@
         <li><a href="#amenities">Amenities</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#concierge">Concierge</a></li>
+        <li><a href="#" class="open-chat-inbox">Concierge</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#booking" class="nav-cta">Book Now</a></li>
       </ul>
@@ -275,28 +275,6 @@
     </div>
   </section>
 
-  <!-- ════ VOICE CONCIERGE ════ -->
-  <section class="section voice-assistant-section" id="concierge">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">AI Concierge</span>
-        <h2 class="section-title">Speak With Our Assistant</h2>
-        <p class="section-desc">Ask about rooms, amenities, dining, or special requests — by voice or text, anytime.</p>
-        <div class="section-line"></div>
-      </div>
-      <div class="voice-assistant-wrap reveal">
-        <div id="staynep-assistant"></div>
-      </div>
-      <script
-        src="http://localhost:3000/embed.js"
-        data-hotel="willow-hotel"
-        data-base="http://localhost:3000"
-        data-height="700px"
-        async
-      ></script>
-    </div>
-  </section>
-
   <!-- ════ CONTACT ════ -->
   <section class="section" id="contact">
     <div class="container">
@@ -391,14 +369,14 @@
           <a href="#amenities">Amenities</a>
           <a href="#experience">Experiences</a>
           <a href="#testimonials">Guest Reviews</a>
-          <a href="#concierge">AI Concierge</a>
+          <a href="#" class="open-chat-inbox">AI Concierge</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <a href="#">Dining</a>
           <a href="#">Spa & Wellness</a>
           <a href="#">Events</a>
-          <a href="#concierge">AI Concierge</a>
+          <a href="#" class="open-chat-inbox">Concierge</a>
         </div>
         <div class="footer-col">
           <h4>Information</h4>
@@ -419,6 +397,30 @@
       </div>
     </div>
   </footer>
+
+  <!-- ════ CHAT INBOX ════ -->
+  <div class="chat-inbox" id="chatInbox" aria-hidden="true">
+    <div class="chat-inbox-panel" role="dialog" aria-labelledby="chatInboxTitle">
+      <header class="chat-inbox-header">
+        <div class="chat-inbox-avatar" aria-hidden="true">🛎️</div>
+        <div class="chat-inbox-meta">
+          <h3 id="chatInboxTitle">AI Concierge</h3>
+          <p>Voice &amp; text · Available 24/7</p>
+        </div>
+        <button type="button" class="chat-inbox-close" id="chatInboxClose" aria-label="Close chat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+      <div class="chat-inbox-body">
+        <div id="staynep-assistant"></div>
+      </div>
+    </div>
+    <button type="button" class="chat-inbox-toggle" id="chatInboxToggle" aria-label="Open concierge chat" aria-expanded="false">
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-open" aria-hidden="true">💬</span>
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-close" aria-hidden="true">&times;</span>
+      <span class="chat-inbox-toggle-label">Concierge</span>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
