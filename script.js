@@ -44,7 +44,7 @@ document.querySelectorAll('a[href^="#"]:not(.open-chat-inbox)').forEach(anchor =
 
 // ── Chat inbox (StayNEP concierge) ──
 const STAYNEP_BASE = 'http://localhost:3000';
-const STAYNEP_HOTEL = 'willow-hotel';
+const STAYNEP_HOTEL = 'aurelian-grand';
 
 const chatInbox = document.getElementById('chatInbox');
 const chatToggle = document.getElementById('chatInboxToggle');
