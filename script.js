@@ -44,7 +44,7 @@ document.querySelectorAll('a[href^="#"]:not(.open-chat-inbox)').forEach(anchor =
 
 // ── Chat inbox (StayNEP concierge) ──
 const STAYNEP_BASE = 'http://localhost:3000';
-const STAYNEP_HOTEL = 'willow-hotel';
+const STAYNEP_HOTEL = 'aurelian-grand';
 
 const chatInbox = document.getElementById('chatInbox');
 const chatToggle = document.getElementById('chatInboxToggle');
@@ -135,7 +135,7 @@ if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('.btn-primary');
-    btn.textContent = 'Message Sent ✓';
+    btn.textContent = "Thanks — we'll be in touch";
     btn.style.background = 'linear-gradient(135deg, #4CAF50, #2E7D32)';
     setTimeout(() => {
       btn.textContent = 'Send Message';
