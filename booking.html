@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Suite Booking Engine | Aurelian Grand</title>
+  <meta name="description" content="Secure your five-star suite directly. Dynamic real-time calculations in NPR, including service charges, VAT tax invoice structures, and promotional codes.">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Direct Suite Booking Engine | Aurelian Grand">
+  <meta property="og:description" content="Calculate and reserve your luxury suite. Secure direct booking benefits and exclusive promo discounts.">
+  <meta property="og:image" content="images/room-penthouse.png">
+</head>
+<body>
+
+  <!-- ════ HEADER / NAVIGATION ════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AURELIAN <span>GRAND</span></a>
+      <div class="nav-links-wrapper">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li class="has-mega-menu">
+            <a href="amenities.html">Amenities</a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-col">
+                    <h5>Wellness & Leisure</h5>
+                    <ul>
+                      <li><a href="amenities.html#spa">💆 Royal Spa Retreat</a></li>
+                      <li><a href="amenities.html#pool">🏊 Infinity Rooftop Pool</a></li>
+                      <li><a href="amenities.html#gym">🏋️ State-of-the-art Gym</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Gastronomy</h5>
+                    <ul>
+                      <li><a href="dining.html#laureole">🍴 L'Aureole Restaurant</a></li>
+                      <li><a href="dining.html#crepuscule">🍸 Le Crépuscule Lounge</a></li>
+                      <li><a href="dining.html#amber">🔥 The Amber Grill</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Business & Events</h5>
+                    <ul>
+                      <li><a href="events.html#business">💼 Conference & Boardrooms</a></li>
+                      <li><a href="events.html#weddings">💍 Weddings & Banquets</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col mega-menu-featured">
+                    <h4>Direct Booking Offer</h4>
+                    <p>Use code <strong>LUXURY20</strong> to get 20% discount on packages & spa treatments.</p>
+                    <a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.7rem;">Book Suite Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="tour.html">Virtual Tour</a></li>
+          <li><a href="blog.html">Attractions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="booking.html" class="nav-cta" style="background:var(--white); color:var(--dark) !important; box-shadow:none;">Book Now</a>
+      </div>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ MOBILE DRAWER MENU ════ -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms & Suites</a>
+      <a href="dining.html">Dining & Lounges</a>
+      <a href="amenities.html">Luxury Amenities</a>
+      <a href="offers.html">Special Offers</a>
+      <a href="events.html">Events & Weddings</a>
+      <a href="tour.html">Virtual Tour & Video</a>
+      <a href="blog.html">Local Attractions</a>
+      <a href="about.html">About Us & Team</a>
+      <a href="contact.html">Contact & FAQ</a>
+      <a href="booking.html" class="active" style="color:var(--gold); font-weight: 600;">Reserve Suite</a>
+    </div>
+    <div class="mobile-drawer-info">
+      <p>📍 1 Royal Marina Drive, Monaco 98000</p>
+      <p>📞 +377 97 77 0000</p>
+      <p>✉️ reservations@aureliangrand.com</p>
+    </div>
+  </div>
+
+  <!-- ════ PAGE TITLE ════ -->
+  <section class="section-header" style="padding-top: 10rem; margin-bottom: 2rem;">
+    <div class="container">
+      <span class="section-tag">Direct Reservations</span>
+      <h1 class="section-title" style="font-size: 3.5rem;">Direct Booking Engine</h1>
+      <p class="section-desc">Check real-time suite availability, calculate taxes, apply direct discount codes, and finalize your coastal reservation instantly.</p>
+      <div class="section-line"></div>
+    </div>
+  </section>
+
+  <!-- ════ INTERACTIVE BOOKING WIZARD ════ -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 8rem;">
+    <div class="container">
+      
+      <div class="booking-wizard-grid">
+        
+        <!-- Left Column: Form Details -->
+        <div class="booking-form-card reveal">
+          <form id="bookingWizardForm" class="contact-form">
+            <h3 style="font-family: var(--font-heading); color: var(--gold); margin-bottom: 2rem;">Reservation Details</h3>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingCheckin">Check-In Date</label>
+                <input type="date" id="bookingCheckin" required>
+              </div>
+              <div class="form-group">
+                <label for="bookingCheckout">Check-Out Date</label>
+                <input type="date" id="bookingCheckout" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingRoom">Select Suite Type</label>
+                <select id="bookingRoom" required>
+                  <option value="deluxe">Deluxe King Room — NPR 43,200/night</option>
+                  <option value="suite">Grand Suite — NPR 78,300/night</option>
+                  <option value="penthouse">Royal Penthouse — NPR 162,000/night</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bookingGuests">Number of Guests</label>
+                <select id="bookingGuests" required>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingPackage">Select Add-On Experience Package</label>
+              <select id="bookingPackage">
+                <option value="standard">Standard Accommodation Only (+ NPR 0)</option>
+                <option value="honeymoon">Honeymoon Bliss Package (+ NPR 15,000 one-time)</option>
+                <option value="family">Family Sanctuary Package (+ NPR 12,000 one-time)</option>
+                <option value="weekend">Weekend Escape Package (+ NPR 8,000 one-time)</option>
+                <option value="corporate">Corporate Executive Package (+ NPR 10,000 one-time)</option>
+              </select>
+            </div>
+
+            <h3 style="font-family: var(--font-heading); color: var(--gold); margin-top: 3rem; margin-bottom: 2rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">Guest Information</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guestName">Full Name</label>
+                <input type="text" id="guestName" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="guestEmail">Email Address</label>
+                <input type="email" id="guestEmail" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingRequests">Special Instructions / Requests</label>
+              <textarea id="bookingRequests" placeholder="Dietary restrictions, pillow preferences, custom shuttle landing coordination..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Confirm Luxury Reservation</button>
+          </form>
+        </div>
+
+        <!-- Right Column: Live Invoice Invoice Summary -->
+        <div class="booking-summary-card reveal">
+          <h3 class="summary-title">Booking Summary</h3>
+          
+          <div class="summary-row">
+            <span id="invRoomName">Deluxe King Room</span>
+            <span id="invRoomRate">NPR 43,200</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Duration:</span>
+            <strong id="invNights" style="color:var(--gold);">1 Night</strong>
+          </div>
+
+          <div class="summary-row" style="border-bottom: 1px dashed var(--glass-border); padding-bottom: 1rem; margin-bottom: 1rem;">
+            <span id="invPackageName">Standard Accommodation Only</span>
+            <span id="invPackageRate">NPR 0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="invSubtotal">NPR 43,200</span>
+          </div>
+
+          <div class="summary-row discount-applied" id="invDiscountRow" style="display: none;">
+            <span>Discount (20% Direct Promo):</span>
+            <span id="invDiscount">- NPR 0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Service Charge (10%):</span>
+            <span id="invServiceCharge">NPR 4,320</span>
+          </div>
+
+          <div class="summary-row" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+            <span>VAT Tax (13%):</span>
+            <span id="invVat">NPR 6,177.60</span>
+          </div>
+
+          <div class="summary-row total">
+            <span>Estimated Total:</span>
+            <span id="invTotal" style="color: var(--gold); font-size: 1.4rem;">NPR 53,697.60</span>
+          </div>
+
+          <!-- Promo Code Input -->
+          <div class="promo-code-input">
+            <input type="text" id="bookingPromo" placeholder="PROMO CODE (LUXURY20)">
+            <button type="button" id="applyPromoBtn">Apply</button>
+          </div>
+          <p style="font-size: 0.7rem; color:var(--text-muted); margin-top: 0.5rem; text-align: center; text-transform: uppercase; letter-spacing: 1px;">Direct bookings save 25% on incidental taxes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AURELIAN <span>GRAND</span></a>
+          <p>A privately owned, five-star luxury eco-resort on the Mediterranean cliffs. Dedicated to absolute privacy and classic European hospitality.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <a href="rooms.html">Rooms &amp; Suites</a>
+          <a href="dining.html">Dining &amp; Lounges</a>
+          <a href="amenities.html">Wellness &amp; Spa</a>
+          <a href="offers.html">Seasonal Packages</a>
+          <a href="tour.html">Virtual 360 Tour</a>
+        </div>
+        <div class="footer-col">
+          <h4>Events &amp; Business</h4>
+          <a href="events.html#weddings">Banquets &amp; Weddings</a>
+          <a href="events.html#business">Conferences &amp; Halls</a>
+          <a href="blog.html">Local Travel Guides</a>
+          <a href="about.html#team">Meet Our Executives</a>
+          <a href="about.html#history">Resort History</a>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <a href="contact.html#faq">Frequently Asked FAQs</a>
+          <a href="contact.html">Reservations Office</a>
+          <a href="#">Privacy Protection Policy</a>
+          <a href="#">Guest Terms of Service</a>
+          <a href="booking.html" style="color:var(--gold); font-weight: 500;">Check Live Availability</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aurelian Grand. All rights reserved. Locally managed eco-resort.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════ DIGITAL CONCIERGE CHAT INBOX ════ -->
+  <div class="chat-inbox" id="chatInbox" aria-hidden="true">
+    <div class="chat-inbox-panel" role="dialog" aria-labelledby="chatInboxTitle">
+      <header class="chat-inbox-header">
+        <div class="chat-inbox-avatar" aria-hidden="true">🛎️</div>
+        <div class="chat-inbox-meta">
+          <h3 id="chatInboxTitle">Digital Concierge</h3>
+          <p>Live chat · Available 24/7</p>
+        </div>
+        <button type="button" class="chat-inbox-close" id="chatInboxClose" aria-label="Close chat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+      <div class="chat-inbox-body">
+        <div id="staynep-assistant"></div>
+      </div>
+    </div>
+    <button type="button" class="chat-inbox-toggle" id="chatInboxToggle" aria-label="Open concierge chat" aria-expanded="false">
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-open" aria-hidden="true">💬</span>
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-close" aria-hidden="true">&times;</span>
+      <span class="chat-inbox-toggle-label">Concierge</span>
+    </button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/staynep-assistant@latest/dist/staynep-assistant.min.js"></script>
+
+  <!-- ════ REAL-TIME URGENCY TOAST ════ -->
+  <div class="urgency-toast" id="urgencyToast">
+    <span class="urgency-toast-icon">🛎️</span>
+    <div class="urgency-toast-text" id="urgencyToastText">
+      <h5>Suite Availability Warning</h5>
+      <p>Only 3 luxury suites remaining for this upcoming weekend.</p>
+    </div>
+    <button type="button" class="urgency-toast-close" id="urgencyToastClose" aria-label="Close warning">&times;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

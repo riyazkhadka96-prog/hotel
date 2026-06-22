@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual 360° Tour &amp; Video | Aurelian Grand</title>
+  <meta name="description" content="Experience Aurelian Grand from anywhere in the world. Take our immersive interactive 360-degree suite tours or view our resort video reels.">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Virtual 360° Tour &amp; Video | Aurelian Grand">
+  <meta property="og:description" content="Step inside our Deluxe rooms and Royal suites with our interactive 360° panning tour. Watch our coastal resort cinematic film.">
+  <meta property="og:image" content="images/hero.png">
+</head>
+<body>
+
+  <!-- ════ HEADER / NAVIGATION ════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AURELIAN <span>GRAND</span></a>
+      <div class="nav-links-wrapper">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li class="has-mega-menu">
+            <a href="amenities.html">Amenities</a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-col">
+                    <h5>Wellness & Leisure</h5>
+                    <ul>
+                      <li><a href="amenities.html#spa">💆 Royal Spa Retreat</a></li>
+                      <li><a href="amenities.html#pool">🏊 Infinity Rooftop Pool</a></li>
+                      <li><a href="amenities.html#gym">🏋️ State-of-the-art Gym</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Gastronomy</h5>
+                    <ul>
+                      <li><a href="dining.html#laureole">🍴 L'Aureole Restaurant</a></li>
+                      <li><a href="dining.html#crepuscule">🍸 Le Crépuscule Lounge</a></li>
+                      <li><a href="dining.html#amber">🔥 The Amber Grill</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Business & Events</h5>
+                    <ul>
+                      <li><a href="events.html#business">💼 Conference & Boardrooms</a></li>
+                      <li><a href="events.html#weddings">💍 Weddings & Banquets</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col mega-menu-featured">
+                    <h4>Direct Booking Offer</h4>
+                    <p>Use code <strong>LUXURY20</strong> to get 20% discount on packages & spa treatments.</p>
+                    <a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.7rem;">Book Suite Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="tour.html" class="active">Virtual Tour</a></li>
+          <li><a href="blog.html">Attractions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="booking.html" class="nav-cta">Book Now</a>
+      </div>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ MOBILE DRAWER MENU ════ -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms & Suites</a>
+      <a href="dining.html">Dining & Lounges</a>
+      <a href="amenities.html">Luxury Amenities</a>
+      <a href="offers.html">Special Offers</a>
+      <a href="events.html">Events & Weddings</a>
+      <a href="tour.html" class="active">Virtual Tour & Video</a>
+      <a href="blog.html">Local Attractions</a>
+      <a href="about.html">About Us & Team</a>
+      <a href="contact.html">Contact & FAQ</a>
+      <a href="booking.html" style="color:var(--gold); font-weight: 600;">Reserve Suite</a>
+    </div>
+    <div class="mobile-drawer-info">
+      <p>📍 1 Royal Marina Drive, Monaco 98000</p>
+      <p>📞 +377 97 77 0000</p>
+      <p>✉️ reservations@aureliangrand.com</p>
+    </div>
+  </div>
+
+  <!-- ════ PAGE TITLE ════ -->
+  <section class="section-header" style="padding-top: 10rem; margin-bottom: 2rem;">
+    <div class="container">
+      <span class="section-tag">Digital Experience</span>
+      <h1 class="section-title" style="font-size: 3.5rem;">Resort Video &amp; 360° Interactive Tour</h1>
+      <p class="section-desc">Experience Aurelian Grand from anywhere in the world. Immerse yourself inside our primary luxury suites and paths before check-in.</p>
+      <div class="section-line"></div>
+    </div>
+  </section>
+
+  <!-- ════ INTERACTIVE 360° TOUR ════ -->
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <h2 style="font-family: var(--font-heading); text-align: center; margin-bottom: 2rem; color:var(--gold);">360° Suite Pan</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; font-weight: 300;">Use the control panel arrows below to sweep your perspective left or right inside our signature Deluxe Suite balcony lounge.</p>
+      
+      <div class="tour-container reveal">
+        <!-- Width: 300% to support panning shifts -->
+        <div class="tour-pan-wrapper" id="tourPanWrapper" style="background-image: url('images/hero.png'); transform: translateX(-33%);"></div>
+        <div class="tour-overlay">
+          <h3>Interactive Panoramic Demo</h3>
+          <p>Pan left or right using the controls below to experience the real spatial grandeur of our master layout.</p>
+        </div>
+        <div class="tour-controls">
+          <button type="button" class="tour-btn-pan" id="panLeft" aria-label="Pan left">◀</button>
+          <button type="button" class="tour-btn-pan" id="panRight" aria-label="Pan right">▶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CINEMATIC VIDEO SHOWCASE ════ -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 6rem; background: var(--dark-surface);">
+    <div class="container">
+      <h2 style="font-family: var(--font-heading); text-align: center; margin-bottom: 1rem; color:var(--gold);">Cinematic Short Reels</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 4rem; font-weight: 300;">Take a visual flight over our sun-washed balconies, pristine private yacht harbor, and active kitchens.</p>
+      
+      <div class="video-showcase-wrapper reveal">
+        <img src="images/hero.png" alt="Aurelian Grand Cinematic Drone View Frame" class="video-showcase-bg">
+        <button type="button" class="video-play-btn" id="playShowcaseVideo" aria-label="Play promotional film"></button>
+        <div class="video-showcase-title">
+          <h3>Aurelian Grand Experience</h3>
+          <p>Take a visual journey through our cliffside paths and private suites</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ VIDEO SHOWCASE MODAL ════ -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button type="button" class="video-modal-close" id="videoModalClose">&times;</button>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Aurelian Grand Promo Film" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AURELIAN <span>GRAND</span></a>
+          <p>A privately owned, five-star luxury eco-resort on the Mediterranean cliffs. Dedicated to absolute privacy and classic European hospitality.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <a href="rooms.html">Rooms &amp; Suites</a>
+          <a href="dining.html">Dining &amp; Lounges</a>
+          <a href="amenities.html">Wellness &amp; Spa</a>
+          <a href="offers.html">Seasonal Packages</a>
+          <a href="tour.html">Virtual 360 Tour</a>
+        </div>
+        <div class="footer-col">
+          <h4>Events &amp; Business</h4>
+          <a href="events.html#weddings">Banquets &amp; Weddings</a>
+          <a href="events.html#business">Conferences &amp; Halls</a>
+          <a href="blog.html">Local Travel Guides</a>
+          <a href="about.html#team">Meet Our Executives</a>
+          <a href="about.html#history">Resort History</a>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <a href="contact.html#faq">Frequently Asked FAQs</a>
+          <a href="contact.html">Reservations Office</a>
+          <a href="#">Privacy Protection Policy</a>
+          <a href="#">Guest Terms of Service</a>
+          <a href="booking.html" style="color:var(--gold); font-weight: 500;">Check Live Availability</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aurelian Grand. All rights reserved. Locally managed eco-resort.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════ DIGITAL CONCIERGE CHAT INBOX ════ -->
+  <div class="chat-inbox" id="chatInbox" aria-hidden="true">
+    <div class="chat-inbox-panel" role="dialog" aria-labelledby="chatInboxTitle">
+      <header class="chat-inbox-header">
+        <div class="chat-inbox-avatar" aria-hidden="true">🛎️</div>
+        <div class="chat-inbox-meta">
+          <h3 id="chatInboxTitle">Digital Concierge</h3>
+          <p>Live chat · Available 24/7</p>
+        </div>
+        <button type="button" class="chat-inbox-close" id="chatInboxClose" aria-label="Close chat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+      <div class="chat-inbox-body">
+        <div id="staynep-assistant"></div>
+      </div>
+    </div>
+    <button type="button" class="chat-inbox-toggle" id="chatInboxToggle" aria-label="Open concierge chat" aria-expanded="false">
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-open" aria-hidden="true">💬</span>
+      <span class="chat-inbox-toggle-icon chat-inbox-toggle-close" aria-hidden="true">&times;</span>
+      <span class="chat-inbox-toggle-label">Concierge</span>
+    </button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/staynep-assistant@latest/dist/staynep-assistant.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

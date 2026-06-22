@@ -1,0 +1,124 @@
+========================================================================
+AURELIAN GRAND - LUXURY HOTEL & RESORT WEBSITE OVERHAUL
+CHANGES SUMMARY
+========================================================================
+
+A complete audit and subsequent total overhaul of the Aurelian Grand website 
+has been performed. The platform has been transformed from a single-page 
+landing site into an international-level, conversion-optimized, fully 
+responsive multi-page luxury booking portal.
+
+Below is the comprehensive list of modifications, architectural updates, 
+and new pages implemented across the codebase:
+
+------------------------------------------------------------------------
+1. GLOBAL STYLE & ARCHITECTURE SYSTEM (style.css)
+------------------------------------------------------------------------
+* Luxury Branding & Design System: Implemented HSL-based style variables 
+  accentuating rich golds (#c9a96e), deep onyx backgrounds (#0a0a0a / #121212), 
+  and clean, high-contrast off-whites (#f8f5f0).
+* Typography Upgrade: Integrated Google Fonts ("Playfair Display" for headings 
+  and serif highlights, "Poppins" & "Inter" for clean, highly readable body copy).
+* Aesthetics & Motion: Crafted custom glassmorphic cards, gold border highlights, 
+  sleek shadow glows, smooth page transitions, and subtle hover scale expansions.
+* Navigation Menu Overhaul: Reconfigured the main navigation dropdown layout. 
+  Replaced the wide mega-menu style with a centered, compact 280px absolute 
+  dropdown containing smooth fade/slide transitions on hover, ensuring a 
+  balanced, premium aesthetic without intrusive screen blocking.
+* Form Styling: Designed matching premium UI styles for inputs, datepickers, 
+  dropdown selections, and booking checklists.
+
+------------------------------------------------------------------------
+2. GLOBAL SCRIPT & INTERACTION ENGINE (script.js)
+------------------------------------------------------------------------
+* Sticky Navbar Control: Monitors scrolling to trigger opacity changes and gold 
+  accent lines when the user scrolls past the hero banner.
+* Mobile Navigation Drawer: Accessible slide-out menu drawer that opens smoothly 
+  from the side on mobile screens, complete with overlay dimming.
+* Testimonials Slider: Built a custom interactive, auto-rotating testimonial 
+  carousel with grab-to-slide cursor support and active gold indicator dots.
+* Room Live Filter & Comparison: Interactive page logic that manages the room catalog 
+  filters (by category, price, views) and highlights comparative specifications 
+  side-by-side.
+* Booking Invoice Engine: Processes date validation, room rates, package add-ons, 
+  applies promo code discounts (e.g., "LUXURY20" for 20% off), calculates a 
+  10% service charge, adds 13% VAT, and prints out a real-time invoice statement 
+  formatted dynamically in Nepali Rupees (NPR).
+* Urgent Notification Prompt: Periodically showcases sliding micro-popup alerts 
+  ("Only 2 Suites remaining for this weekend", etc.) to prompt conversion.
+* FAQ Accordion Controller: Allows smooth toggles and height transitions for 
+  nested accordion questions.
+* Virtual 360-Degree Panoramic Tour Simulator: Utilizes CSS translation properties 
+  to slide room images horizontally, simulating a panoramic look.
+* Travel Blog Sightseeing Calculator: Dynamically highlights local travel times 
+  and walking ranges when clicking on attraction nodes.
+
+------------------------------------------------------------------------
+3. HOME PAGE (index.html)
+------------------------------------------------------------------------
+* Audited and restructured to serve as the core luxury entry point.
+* Custom Hero Section: Visual intro with grand typography and a call-to-action to 
+  the booking engine.
+* Why Choose Us Grid: Highlights value props (luxury suites, central location, 
+  fine dining, safety, dedicated concierge).
+* Key Statistics Bar: Counts of served guests, rooms, staff count, and legacy years.
+* Awards Showcase: Carousel/grid highlighting prestigious hospitality badges.
+* Partner Brand Marquee: Smooth infinite scrolling marquee featuring high-end brand 
+  logos and press quotes.
+* Sustainability Commitment: Details regarding eco-luxury, organic dining, and 
+  green energy offsets.
+* Newsletter Block: Glassmorphic email capture card with instant feedback alerts.
+* Instagram Grid: Hover zoom gallery of high-end hotel lifestyle visuals.
+* StayNEP Concierge: Bottom-right chat popup simulation acting as a digital assistant.
+
+------------------------------------------------------------------------
+4. NEW INDIVIDUAL PAGES
+------------------------------------------------------------------------
+* rooms.html (Rooms & Suites Showcase):
+  - Displays Deluxe King, Grand Suite, and Royal Penthouse room cards.
+  - Curated prices matching Nepali Rupees (NPR) conversion rates ($1 = NPR 135).
+  - Side-by-side room comparison matrix evaluating space, views, butler service, 
+    jacuzzi availability, and private chef services.
+* dining.html (Gastronomy):
+  - Exhibits fine-dining restaurants (L'Aureole, Le Crépuscule, The Amber Grill).
+  - Tabbed menus displaying detailed gourmet breakfast, dinner, and beverage options.
+  - Custom Table Reservation Request form.
+* amenities.html (Wellness & Experience):
+  - Highlights Bvlgari Spa, Infinity Rooftop Pool, Fitness Hub, and VIP Transfers.
+* offers.html (Special Packages):
+  - Curates exclusive deals: Honeymoon Package, Family Sanctuary, Weekend Escape, 
+    and Corporate Executive.
+  - Outlines exact inclusions (shuttles, spa vouchers, credits) and direct booking links.
+* events.html (Weddings & Summits):
+  - Showcases grand ballrooms and boardrooms with capacity metrics.
+  - Request for Proposal (RFP) wedding/event enquiry form.
+* tour.html (Virtual Experience):
+  - Houses the 360-degree virtual room scanner simulation.
+  - Embedded luxury video player mockup showing resort B-roll footage.
+* blog.html (Travel & Local Excursions):
+  - Curates local travel articles (Heritage walks, Himalayan viewpoints, monasteries).
+  - Interactive Attractions Travel Guide mapping distance and transit times.
+* about.html (History & Team):
+  - Details the resort timeline since 2001.
+  - Showcases management cards for General Manager, Executive Chef, and Head Concierge.
+* contact.html (Contact & Help Desk):
+  - Address info, interactive contact form, and searchable FAQ Accordion.
+* booking.html (Dedicated Booking Engine):
+  - Integrates the multi-step checkout widget where guests select dates, rooms, 
+    packages, input codes, and view complete billing statements before booking.
+
+------------------------------------------------------------------------
+5. SEO, METADATA & ACCESSIBILITY
+------------------------------------------------------------------------
+* Robots & Sitemap Setup: Created robots.txt and sitemap.xml to index all 11 pages.
+* Meta Tags: Outfitted each individual page with matching unique titles, meta descriptions, 
+  and Open Graph attributes.
+* JSON-LD Schema: Embedded a detailed Hotel Structured Data JSON script in index.html for 
+  enhanced rich snippets on search results.
+* Accessibility Enhancements: Semantic HTML structures (nav, main, header, footer, 
+  article, section), ARIA labels, form placeholder labels, and high contrast colors.
+
+========================================================================
+All updates have been validated for responsive mobile layouts down to 320px 
+and tested for functional script interactions.
+========================================================================
